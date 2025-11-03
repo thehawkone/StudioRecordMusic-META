@@ -1,0 +1,27 @@
+.header {
+  height: 100px;
+  border: 1px solid red;
+  position: relative;
+  z-index: 2;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    padding-top: 48px;
+  }
+  &__logo {
+    padding-left: 140px;
+  }
+  &__menu {
+    padding-left: 40px;
+    &-list {
+      display: flex;
+      gap: 40px;
+    }
+  }
+  &__links {
+    padding-left: 507px;
+    display: flex;
+    gap: 12px;
+  }
+}

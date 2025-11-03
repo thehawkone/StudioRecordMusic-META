@@ -1,0 +1,94 @@
+$text-primary: #FFFFFF;
+$text-accent-100: #8DFD1B;   // 100%
+$text-accent-75: rgba(141, 253, 27, 0.75);  // 75%
+$text-accent-50: rgba(141, 253, 27, 0.5);   // 50%
+$text-secondary: #A8A8A8;
+$bg-main: #000000;
+$bg-secondary: #222222;
+$footer-border: #1D0931;
+$footer-bg: #42006A;
+
+$font-family: "DM Mono", sans-serif;
+$second-family: "Audiowide", sans-serif;
+$third-family: "Inter", sans-serif;
+
+$font-sizes: (
+  // Заголовки
+        title-xl: 79px,
+        title-lg: 51px,
+        title-md: 38px,
+  // Цифры
+        numbers: 28px,
+  // Средние заголовки / имена
+        subtitle-lg: 21px,
+        name-md: 21px,
+  // Описание / мелкие заголовки
+        body-lg: 16px,
+        body-md: 12px,
+        body-sm: 11px,
+  // Очень маленький текст / футер
+        caption: 8px,
+        footer: 6px
+);
+// Функция для удобного использования
+@function font-size($key) {
+  @return map-get($font-sizes, $key);
+}
+
+// second-family AUDIOWIDE
+@mixin font-title-xl{
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 79px;
+  line-height: 111%;
+  text-transform: uppercase;
+  color: $text-primary;
+}
+@mixin font-title-lg{
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 51px;
+  line-height: 119%;
+  text-transform: uppercase;
+  color: $text-primary;
+}
+@mixin font-title-md{
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $text-primary;
+}
+
+// font-family DM MONO
+@mixin font-second-title-xl {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 152%;
+  color: $text-accent-100;
+}
+@mixin font-second-title-lg {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: $text-primary;
+}
+
+// description
+@mixin font-body-xl {
+  font-family: $third-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: $text-primary;
+}
+@mixin font-body-lg {
+  font-family: $third-family;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: $text-primary;
+}

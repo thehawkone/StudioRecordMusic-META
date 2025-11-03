@@ -1,0 +1,11 @@
+/* 1. Настройки и шрифты */
+@import 'variables';
+@import 'fonts';
+
+/* 2. Базовые стили */
+@import 'base';
+
+/* 3. Сетка и общие элементы */
+@import 'layout';
+
+@import 'components/header';

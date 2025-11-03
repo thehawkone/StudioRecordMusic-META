@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* 1. Настройки и шрифты */
+@font-face {
+  font-family: "Audiowide";
+  src: url("fonts/Audiowide-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DMMono";
+  src: url("fonts/DMMono-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-regular.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* 2. Базовые стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: #FFFFFF;
+}
+
+body {
+  font-family: "DM Mono", sans-serif;
+  background-color: #000000;
+}
+
+/* 3. Сетка и общие элементы */
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 100px;
+  border: 1px solid red;
+  position: relative;
+  z-index: 2;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  padding-top: 48px;
+}
+.header__logo {
+  padding-left: 140px;
+}
+.header__menu {
+  padding-left: 40px;
+}
+.header__menu-list {
+  display: flex;
+  gap: 40px;
+}
+.header__links {
+  padding-left: 507px;
+  display: flex;
+  gap: 12px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Audiowide";
+  src: url("fonts/Audiowide-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DMMono";
+  src: url("fonts/DMMono-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-regular.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*# sourceMappingURL=_fonts.css.map */
