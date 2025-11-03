@@ -1,0 +1,53 @@
+@import '../variables';
+@import '../buttons';
+
+.collection {
+  position: relative;
+  height: 779px;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 114px;
+  }
+
+  &__block {
+    padding-left: 40px;
+  }
+  &__title {
+    padding-left: 66px;
+    @include font-title-md;
+    .title-second {
+      color: $text-secondary; // второй цвет
+    }
+  }
+  &__image {
+    margin-top: 41px;
+    width: 360px;
+    height: 360px;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    margin-left: 163px;
+
+    &-title {
+      display: inline-block;
+      padding-left: 22px;
+      border-left: 2px solid $text-accent-100;
+      @include font-second-title-xl;
+    }
+    &-description {
+      @include font-body-xl;
+      padding-top: 32px;
+    }
+  }
+
+  &__button {
+    @include button-green-border;
+    margin-top: 36px;
+    width: 246px;
+    height: 42px;
+  }
+}
