@@ -1,0 +1,33 @@
+@import '../variables';
+@import '../buttons';
+
+.hero {
+  position: relative;
+  height: 653px;
+
+  &__content {
+    display: flex;
+  }
+  &__information {
+    display: flex;
+    flex-direction: column;
+    padding-left: 77px;
+  }
+  &__title {
+    padding-top: 133px;
+    @include font-title-lg
+  }
+  &__description {
+    padding-top: 43px;
+    @include font-body-xl;
+  }
+  &__button {
+    width: 205px;
+    height: 60px;
+    margin-top: 115px;
+    @include button-green-fill;
+  }
+  &__image {
+    padding-left: 74px;
+  }
+}
