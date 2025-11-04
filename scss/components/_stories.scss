@@ -1,0 +1,73 @@
+@import '../variables';
+
+.stories {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 245px;
+    padding-left: 40px;
+    border: 1px solid green;
+  }
+
+  &__title {
+    padding-left: 387px;
+    @include font-title-md;
+    .title-second {
+      color: $text-secondary;
+    }
+  }
+
+  &__news {
+    display: flex;
+    margin-top: 61px;
+  }
+  &__points {
+    display: flex;
+    flex-direction: column;
+    span {
+      width: 282px;
+      height: 72px;
+      padding-top: 25px;
+      padding-left: 28px;
+    }
+    .points-selected {
+      @include font-second-title-lg;
+      color: $text-accent-100;
+      background: $bg-secondary;
+    }
+    .point-non-selected {
+      @include font-second-title-lg;
+      background: $bg-main;
+    }
+  }
+
+  &__block {
+    display: flex;
+    width: 878px;
+    height: 538px;
+    background: $bg-secondary;
+    align-items: flex-start;
+
+    .block__image {
+      width: 172px;
+      height: 253px;
+      margin-top: 60px;
+      margin-left: 60px;
+    }
+
+    .block__information {
+      margin-top: 60px;
+      margin-left: 40px;
+      &-title {
+        display: inline-block;
+        padding-left: 22px;
+        border-left: 2px solid $text-accent-100;
+        @include font-second-title-xl;
+      }
+      &-description {
+        @include font-body-xl;
+        padding-top: 32px;
+      }
+    }
+  }
+}

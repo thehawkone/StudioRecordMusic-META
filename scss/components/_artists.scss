@@ -27,13 +27,11 @@
       object-fit: cover;
       border-radius: 2px;
       transition: transform 0.3s ease, opacity 0.3s ease;
-
       &:hover {
         transform: scale(1.05);
         opacity: 0.9;
       }
     }
-
     .block__description {
       @include font-second-title-lg;
       line-height: 150%;
