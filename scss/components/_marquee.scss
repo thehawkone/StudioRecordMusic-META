@@ -1,0 +1,46 @@
+@import '../variables';
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 85s linear infinite;
+}
+
+.marquee-track span {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 79px;
+  line-height: 111%;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.marquee-track span:nth-child(odd) {
+  color: #fff;
+}
+.marquee-track span:nth-child(even) {
+  color: #000;
+}
+
+/* Псевдоэлемент для дублирования текста */
+.marquee-track::after {
+  content: attr(data-text);
+  display: flex;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

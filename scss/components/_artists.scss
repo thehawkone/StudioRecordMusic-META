@@ -1,0 +1,44 @@
+@import '../variables';
+
+.artists {
+  margin-top: 115px;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    padding-left: 40px;
+    display: grid;
+    width: 1440px;
+    grid-template-columns: repeat(4, 245px);
+    grid-template-rows: repeat(2, 309px);
+    gap: 60px;
+    justify-content: start;
+    align-content: center;
+  }
+
+  &__block {
+    width: 245px;
+    height: 309px;
+    text-align: center;
+
+    .block__image {
+      width: 245px;
+      height: 245px;
+      object-fit: cover;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+    }
+
+    .block__description {
+      @include font-second-title-lg;
+      line-height: 150%;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+}

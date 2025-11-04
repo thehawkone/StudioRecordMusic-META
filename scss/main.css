@@ -135,7 +135,7 @@ body {
 .collection__content {
   display: flex;
   flex-direction: row;
-  padding-top: 114px;
+  margin-top: 114px;
 }
 .collection__block {
   padding-left: 40px;
@@ -203,6 +203,93 @@ body {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   color: #000000;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 85s linear infinite;
+}
+
+.marquee-track span {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-size: 79px;
+  line-height: 111%;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.marquee-track span:nth-child(odd) {
+  color: #fff;
+}
+
+.marquee-track span:nth-child(even) {
+  color: #000;
+}
+
+/* Псевдоэлемент для дублирования текста */
+.marquee-track::after {
+  content: attr(data-text);
+  display: flex;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.artists {
+  margin-top: 115px;
+  display: flex;
+  justify-content: center;
+}
+.artists__content {
+  padding-left: 40px;
+  display: grid;
+  width: 1440px;
+  grid-template-columns: repeat(4, 245px);
+  grid-template-rows: repeat(2, 309px);
+  gap: 60px;
+  justify-content: start;
+  align-content: center;
+}
+.artists__block {
+  width: 245px;
+  height: 309px;
+  text-align: center;
+}
+.artists__block .block__image {
+  width: 245px;
+  height: 245px;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.artists__block .block__image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.artists__block .block__description {
+  font-family: "DMMono", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #FFFFFF;
+  line-height: 150%;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
